@@ -1,0 +1,13 @@
+version: 3
+
+tasks:
+  build:
+    desc: Build
+    cmds:
+      - earthly +build
+      - earthly --artifact +build/ntfsvc-client ./dist/
+
+  dependencyUpdates:
+    desc: Show dependency updates
+    cmds:
+      - go list -u -m -json all | docker run --rm -i psampaz/go-mod-outdated -update -direct

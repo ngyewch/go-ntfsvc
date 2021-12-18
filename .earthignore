@@ -1,0 +1,9 @@
+.github/
+.idea/
+.task/
+dist/
+
+Earthfile
+LICENSE
+README.md
+Taskfile.yml
