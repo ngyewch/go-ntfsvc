@@ -1,0 +1,3 @@
+task 3.12.0
+golang 1.17.8
+goreleaser 1.7.0

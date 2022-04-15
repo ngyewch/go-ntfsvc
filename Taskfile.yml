@@ -1,7 +1,17 @@
 version: 3
 
 tasks:
+  clean:
+    desc: Clean
+    cmds:
+      - rm -rf dist
+
   build:
+    desc: Build
+    cmds:
+      - goreleaser --snapshot --rm-dist
+
+  build-via-earthly:
     desc: Build
     cmds:
       - earthly +build
